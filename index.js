@@ -28,9 +28,56 @@ function showCocktailList(drinks) {
         listItem.textContent = drink.strDrink;
         cocktailList.appendChild(listItem);
         listItem.addEventListener(`click`,()=>{
-            cocktailRecipe(data)
+            cocktailRecipe(drink.idDrink)
         })
     });
 }
+function cocktailRecipe(drinkId){
+    const recipeapi= `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkId}`
+    fetch(recipeapi)
+    .then(res=>res.json())
+    .then(data => {
+        const drink= data.drinks[0]
 
+            recipeDiv.innerHTML=`
+                    <h2>${drink.strDrink}</h2>
+                    <img src="${drink.strDrinkThumb}" alt="${drink.strDrink}" class="recipe-image">
+                    <h3>Ingredients:</h3>
+                    <ul>${ingredients}</ul>
+                    <h3>Instructions:</h3>
+                <p>${drink.strInstructions}</p>
+                <p id="likes">0</p>
+                <button class="Likebutton" onclick="likeAdder()">Like</button>
+
+                <!-- Comment Section -->
+                <h3>Comments:</h3>
+                <input type="text" id="commentInput" placeholder="Enter your comment">
+                <button class="CommentButton" onclick="addComment()">Add Comment</button>
+                <ol id="commentList"></0l>
+            `
+            document.querySelector(`.Likebutton`).addEventListener(`click`,()=>{
+                likeAdder()
+            })
+        
+    })
+}
+function likeAdder(){
+    let likes= document.getElementById(`likes`)
+    let value = parseInt(likes.innerHTML)
+    ++value
+    document.getElementById("likes").innerHTML = value;
+}
+function addComment() {
+    const commentInput = document.getElementById('commentInput');
+    const commentList = document.getElementById('commentList');
+    const commentText = commentInput.value;
+
+    if (commentText) {
+        const commentItem = document.createElement('li');
+        commentItem.textContent = commentText;
+        commentList.appendChild(commentItem);
+        commentInput.value = ''; // Clear the input field after adding the comment
+    }
+}
+likeAdder();
 
