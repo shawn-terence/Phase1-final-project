@@ -41,7 +41,7 @@ function cocktailRecipe(drinkId){
 
             recipeDiv.innerHTML=`
                     <h2>${drink.strDrink}</h2>
-                    <img src="${drink.strDrinkThumb}" alt="${drink.strDrink}" class="recipe-image">
+                    <img src="${drink.strDrinkThumb}" alt="${drink.strDrink}" class="recipeimage">
                     <h3>Ingredients:</h3>
                     <ul>${ingredients}</ul>
                     <h3>Instructions:</h3>
