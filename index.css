@@ -1,6 +1,21 @@
 body{
     padding: 5px;
 }
+.mr-2{
+    padding-right: 10px;
+}
+#navbar{
+    background: rgb(2,0,36);
+background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(194,23,61,1) 25%, rgba(214,89,16,1) 93%);
+margin-bottom: 10px;
+}
+#searchbx{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#searchbtn{
+    margin-left: 10px;
+}
 .searchList{
     max-width: 50vh;
 }
@@ -9,6 +24,7 @@ body{
     display: flex;
     flex-direction: row;
 }
+
 .recipeimage{
     max-width: 400px;
     margin-bottom: 10px;
@@ -16,7 +32,10 @@ body{
 .list-item{
     color: rgb(88, 204, 104);
 }
-
+.container{
+    display: flex;
+    flex-direction: row;
+}
 #wordingDiv{
     padding-top: 45px;
     padding-left: 20px;
@@ -29,9 +48,7 @@ body{
     background-color: red;
 }
 .cardingDiv {
-    --bg: #555;
-    --contrast: #999;
-    --grey: #93a1a1;
+    --bg: rgba(2,0,36,1);
     position: relative;
     padding: 9px;
     background-color: var(--bg);

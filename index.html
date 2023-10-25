@@ -8,17 +8,22 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
     <section id="searchList">
         <div class="searchHolder">
-            <nav class="navbar navbar-light bg-light">
+            <nav class="navbar navbar-light bg-light" id="navbar">
                 <div class="container">
                     <div class="row w-100">
-                        <div class="col-sm-6">
-                            <input class="form-control" id="searchbx" type="search" placeholder="Search" aria-label="Search">
-                        </div>
-                        <div class="col-sm-6">
-                            <button class="btn btn-outline-success my-2 my-sm-0" id="searchbtn" type="submit">Search</button>
-                        </div>
+                        <a class="col d-flex align-items-center navbar-brand" href="#">
+                            <img src="https://cdn-icons-png.flaticon.com/128/6767/6767436.png" alt="" width="50" height="44" class="mr-2">
+                            <p class="mb-0 text-dark">The Tipsy Developer</p>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="searchbx" type="search" placeholder="Search" aria-label="Search">
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn btn-outline-success my-2 my-sm-0" id="searchbtn" type="submit">Search</button>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </nav>            
@@ -28,7 +33,7 @@
                         <!-- List items go here -->
                     </ol>
                 </div>
-                <div class="col-6 offset-2 border">
+                <div class="col-6 offset-2 ">
                     <div class="recipediv">
                         <!-- cocktail Recipe content goes here -->
                     </div>
