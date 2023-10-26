@@ -1,4 +1,5 @@
-const apiUrl = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=';
+const apiUrl = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i='; //assign a variable to Api link
+//assign variable names to html elements
 const searchBox = document.querySelector('#searchbx');
 const searchBtn = document.querySelector('#searchbtn');
 const cocktailList = document.querySelector('.cocktailList');
