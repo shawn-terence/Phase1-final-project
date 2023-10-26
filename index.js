@@ -73,6 +73,9 @@ document.addEventListener(`DOMContentLoaded`,()=>{
                 document.querySelector(`.Likebutton`).addEventListener(`click`,()=>{
                     likeAdder()
                 })
+                document.querySelector(`commentButton`).addEventListener(`click`,()=>{
+                    addComment()
+                })
             
         })
     }
