@@ -66,7 +66,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
                                 </div>
                                 <h3>Comments:</h3>
                                 <input type="text" id="commentInput" placeholder="Enter your comment">
-                                <button class="CommentButton" onclick="addComment()">Add Comment</button>
+                                <button class="CommentButton" >Add Comment</button>
                                 <ol id="commentList"></ol>
                             </div>
                         </div>
@@ -77,7 +77,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
                 });
                 document.querySelector(`.CommentButton`).addEventListener(`click`, () => {
                     addComment();
-                });
+              });
             });
     }
 
