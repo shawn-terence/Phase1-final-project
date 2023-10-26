@@ -57,8 +57,10 @@ document.addEventListener(`DOMContentLoaded`,()=>{
                                     </ul>
                                     <h3>Instructions:</h3>
                                 <p>${drink.strInstructions}</p>
-                                <p id="likes">0</p>
-                                <button class="Likebutton" onclick="likeAdder()">Like</button>
+                                <div class="likeSect">
+                                    <p id="likes">0</p>
+                                    <button class="Likebutton" onclick="likeAdder()">Like</button>
+                                </div>
 
                                 <!-- Comment Section -->
                                 <h3>Comments:</h3>
@@ -73,9 +75,10 @@ document.addEventListener(`DOMContentLoaded`,()=>{
                 document.querySelector(`.Likebutton`).addEventListener(`click`,()=>{
                     likeAdder()
                 })
-                document.querySelector(`commentButton`).addEventListener(`click`,()=>{
+                document.querySelector(`.CommentButton`).addEventListener(`click`,()=>{
                     addComment()
                 })
+                
             
         })
     }
